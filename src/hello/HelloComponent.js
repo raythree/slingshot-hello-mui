@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Card, CardHeader, CardText } from 'material-ui/Card';
+
+import HelloForm from './HelloForm';
 
 export default class HelloComponent extends React.Component {
   constructor(props) {
@@ -14,6 +17,10 @@ export default class HelloComponent extends React.Component {
 
   sayHelloAsync() {
     this.props.sayHelloAsync("Hello World Async!");
+  }
+
+  onSubmitName(values) {
+    console.log('submitted: ' + values.firstName + " " + values.lastName);
   }
 
   render() {
@@ -42,6 +49,18 @@ export default class HelloComponent extends React.Component {
         <div>
           {message}
         </div>
+
+        <Card style={{marginTop: '1em'}}>
+          <CardHeader
+            title="Optional Name Input Form"
+            actAsExpander={true}
+            showExpandableButton={true}
+          />
+          <CardText expandable={true}>
+            <HelloForm onSubmit={this.onSubmitName.bind(this)}/>
+          </CardText>
+        </Card>
+
       </Paper>
     );
   }
