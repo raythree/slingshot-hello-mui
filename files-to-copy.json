@@ -1,0 +1,9 @@
+[
+  "src/index.js",
+  "src/routes.js",
+  "src/hello/**.*",
+  "src/store/**.*",
+  "src/styles/**.*",
+  "src/common/*/**.*",
+  "src/test/**.*"
+]

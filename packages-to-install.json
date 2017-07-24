@@ -1,0 +1,15 @@
+[
+  "axios",
+  "bluebird",
+  "material-ui",
+  "es6-promise",
+  "redux-form",
+  "typeface-roboto",
+  "react-tap-event-plugin",
+  "prop-types",
+  "redux-action-binder",
+  "redux-promise-resolver"
+]
+
+
+

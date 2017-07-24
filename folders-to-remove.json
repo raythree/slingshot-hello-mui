@@ -1,0 +1,10 @@
+[
+  "src/actions",
+  "src/components",
+  "src/containers",
+  "src/reducers",
+  "src/actions",
+  "src/constants",
+  "src/utils",
+  "src/store/store.spec.js"
+]
