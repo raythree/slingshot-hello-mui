@@ -19,7 +19,7 @@ export default class HelloComponent extends React.Component {
     this.props.sayHelloAsync("Hello World Async!");
   }
 
-  onSubmitName(values) {
+  onSubmitNameForm(values) {
     console.log('submitted: ' + values.firstName + " " + values.lastName);
   }
 
@@ -52,12 +52,12 @@ export default class HelloComponent extends React.Component {
 
         <Card style={{marginTop: '1em'}}>
           <CardHeader
-            title="Optional Name Input Form"
+            title="Name Input"
             actAsExpander={true}
             showExpandableButton={true}
           />
           <CardText expandable={true}>
-            <HelloForm onSubmit={this.onSubmitName.bind(this)}/>
+            <HelloForm onSubmit={this.onSubmitNameForm.bind(this)}/>
           </CardText>
         </Card>
 
