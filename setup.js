@@ -3,6 +3,7 @@ var fs = require('fs');
 var exec = require('child_process').execSync;
 var rimraf = require('rimraf').sync;
 var async = require('async');
+var path = require('path');
 
 var packages = require('./packages-to-install');
 var rmFolders = require('./folders-to-remove');
@@ -43,13 +44,13 @@ function installPackages(folder) {
 
 function removeFolders(folder) {
   var pwd = process.cwd();
-  process.chdir(folder);
   rmFolders.forEach(function (name) {
-    var fullPath = folder + name;
+    var fullPath = path.resolve(folder) + '/' + name;
     console.log("rimraf: " + fullPath);
-    rimraf(fullPath);
+    rimraf(fullPath, {rmdir: true}, function (err) {
+      console.error('ERROR removing ' + fullPath + ' ' + err);
+    });
   });
-  process.chdir(pwd);
 }
 
 function installFiles(folder, cb) {

@@ -27,7 +27,7 @@ const validate = values => {
 let HelloForm = (props) => {
   const {handleSubmit, pristine, submitting} = props;
   return (
-    <form onSubmit={props.handleSubmit(props.onSubmit)}>
+    <form onSubmit={handleSubmit(props.onSubmit)}>
       <Field name="firstName" label="First Name" prompt="First Name" component={renderInput}/>
       <Field name="lastName" label="Last Name" prompt="Last Name" component={renderInput}/>
 

@@ -6,5 +6,6 @@
   "src/actions",
   "src/constants",
   "src/utils",
-  "src/store/store.spec.js"
+  "src/store/store.spec.js",
+  "src/store/__snapshots__"
 ]
