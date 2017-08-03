@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import App from './common/components/App';
+import App from './App';
 import NotFound from './common/components/NotFound';
 import HelloContainer from './hello/HelloContainer';
 
